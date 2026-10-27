@@ -1,0 +1,18 @@
+# Local secrets and editor/runtime files
+.env
+.DS_Store
+.idea/
+venv/
+__pycache__/
+*.pyc
+
+# Archived run metadata and model-internal artifacts
+data/llm_run/**/manifest*.json
+data/llm_run/**/state*.json
+data/llm_run/**/raw.jsonl
+data/llm_run/**/evidence.jsonl
+data/llm_run/**/errors.csv
+data/llm_run/**/selfconsistency/
+data/llm_run/out_final_*/
+
+# Keep data/llm_run/out/ tracked: it contains the shared V1 labels.

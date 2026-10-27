@@ -1,0 +1,288 @@
+<threatknowledge:ThreatCollection xmlns:xmi="http://www.omg.org/XMI" xmlns:threatknowledge="http://distrinet.cs.kuleuven.be/threatknowledge" xmi:version="2.0" xmi:id="_tYYVwPCcEeuVsIWQ8i8qOw" name="LINDDUN Example Threats">
+    <threat xmi:id="_tYYVwfCcEeuVsIWQ8i8qOw" name="Covid Contact Tracing Info Sold (Netherlands)" description="Information collected by the Dutch government for covid contact tracing was leaked and sold online" fullDescription="Millions of records from the CoronIT and HPZone systems used in the Netherlands to track, respectively, corona test results and contact tracing information; have been sold and exchanged between criminals.">
+        <refs>
+            https://www.computerweekly.com/news/252495983/Data-of-thousands-of-Dutch-citizens-leaked-from-government-Covid-19-systems
+        </refs>
+        <threatcharacteristic xmi:id="_tYYVwvCcEeuVsIWQ8i8qOw" name="Storage/processing personal data" description="Storage and processing of extensive amounts of personal data.">
+            <characteristic href="linddun.threatknowledge#_2YCx6p4TEeycJfgSUGGgug"/>
+        </threatcharacteristic>
+        <threatcharacteristic xmi:id="_tYY80PCcEeuVsIWQ8i8qOw" name="Transfer of personal information to third parties but legitimate users of the system." description="Legitimate users had access to all the data and could export it. As a result, this sensitive data was sold by malicious insiders. This threat would not necessarily be found with the classic STRIDE information disclosure threat as there was no breach of the system. ">
+            <characteristic href="linddun.threatknowledge#_2YCx_p4TEeycJfgSUGGgug"/>
+        </threatcharacteristic>
+        <threatcharacteristic xmi:id="_b0xAsG68Ee-g9PJuI_xoBg" name="Storage/processing personal data" description="Storage and processing of personal data pertaining an excessive number of data subjects.">
+            <characteristic href="linddun.threatknowledge#_2YCx8J4TEeycJfgSUGGgug"/>
+        </threatcharacteristic>
+    </threat>
+    <threat xmi:id="_tYY80fCcEeuVsIWQ8i8qOw" name="Facebook Data Leak (500 Million Records)" description="Facebook data leak of 500 million people’s records." fullDescription="In 2021, a data leak at social media platform Facebook led to the unauthorized disclosure of over 500 million records, including full names, phone numbers, locations and birth dates of the involved data subjects.">
+        <refs>
+            https://www.theverge.com/2022/11/28/23481786/meta-fine-facebook-data-leak-ireland-dpc-gdpr
+        </refs>
+        <threatcharacteristic xmi:id="_tYY80vCcEeuVsIWQ8i8qOw" name="Data disclosed by data subject" description="Data containing identity details is directly collected from the data subject.">
+            <characteristic href="linddun.threatknowledge#_uUkROfCcEeuVsIWQ8i8qOw"/>
+        </threatcharacteristic>
+        <threatcharacteristic xmi:id="_tYY80_CcEeuVsIWQ8i8qOw" name="Stored for a long time" description="This breach also affected former users who already had their account deleted. Despite this 'deletion', the social network had retained their data after all, which meant they were still affected by the breach.">
+            <characteristic href="linddun.threatknowledge#_5P1DAJppEe2-QLTNWOlbZQ"/>
+        </threatcharacteristic>
+        <threatcharacteristic xmi:id="_tYY81PCcEeuVsIWQ8i8qOw" name="Query interface for phone numbers" description="The dataset could be queried for phone number, allowing to find the corresponding user account. In this way, an adversary could use the phone number as a unique identifier to link accounts to actual data subjects, and potentially other data that is known about this person. ">
+            <characteristic href="linddun.threatknowledge#_uUjqQfCcEeuVsIWQ8i8qOw"/>
+        </threatcharacteristic>
+    </threat>
+    <threat xmi:id="_tYY81fCcEeuVsIWQ8i8qOw" name="Browser Fingerprinting" description="A profile of the browser is constructed by relying on numerous quasi-identifiers and derived properties." fullDescription="Various characteristics of a user's browser (such as screen resolution, installed plugins, user agent, etc.) can be used to form a unique fingerprint of this browser and therefore identify the user across multiple websites. ">
+        <refs>https://coveryourtracks.eff.org/</refs>
+        <threatcharacteristic xmi:id="_tYY81vCcEeuVsIWQ8i8qOw" name="Browser properties as quasi-identifiers" description="A combination of browser properties can be used as a quasi-identifier. For example, the user agent, language, window size, extensions, supported features, etc.">
+            <characteristic href="linddun.threatknowledge#_1sSPYsoWEeyJGPMVWHqlyQ"/>
+        </threatcharacteristic>
+        <threatcharacteristic xmi:id="_tYY81_CcEeuVsIWQ8i8qOw" name="Derive fingerprint" description="A fingerprint can be derived by rendering text and graphics and exploiting the fact that different physical devices will render these slightly differently. This allows distinguishing physcal devices, and by extension the users of said devices, from others.">
+            <characteristic href="linddun.threatknowledge#_uUkRQ_CcEeuVsIWQ8i8qOw"/>
+        </threatcharacteristic>
+    </threat>
+    <threat xmi:id="_tYY82PCcEeuVsIWQ8i8qOw" name="Social network gap" description="Social network tracking data subjects that do not have an account at this service" fullDescription="Regardless of a user’s presence on a social network, these networks can learn a lot about that user by combining the information they learn indirectly through the other users.">
+        <refs>
+            https://www.vox.com/2018/4/20/17254312/facebook-shadow-profiles-data-collection-non-users-mark-zuckerberg
+        </refs>
+        <refs>
+            https://www.theguardian.com/technology/2018/apr/17/facebook-admits-tracking-users-and-non-users-off-site
+        </refs>
+        <threatcharacteristic xmi:id="_tYY82fCcEeuVsIWQ8i8qOw" name="Combine indirect links" description="Indirect links to the person not present on the network are combined. (Person is present in contact list of existing users on the network.)">
+            <characteristic href="linddun.threatknowledge#_uUjqUPCcEeuVsIWQ8i8qOw"/>
+        </threatcharacteristic>
+        <threatcharacteristic xmi:id="_GENioCfoEe-jseb_ZxRTBA" name="Data subject unaware their data is being processed" description="The data subject does not know their data is being processed, as they never interacted with the social network. Their information is processed via the profiles of their friends.">
+            <characteristic href="linddun.threatknowledge#_2YHqYZ4TEeycJfgSUGGgug"/>
+        </threatcharacteristic>
+    </threat>
+    <threat xmi:id="_tYY82vCcEeuVsIWQ8i8qOw" name="DB Query inference" description="Information obtained from consecutive DB queries can be used for profiling data subjects" fullDescription="By querying a database for multiple different pieces of information, further data could be inferred than what is strictly stored in the database. This could then be used to profile data subjects or learn sensitive information.">
+        <refs>https://en.wikipedia.org/wiki/Inference_attack</refs>
+        <threatcharacteristic xmi:id="_tYY82_CcEeuVsIWQ8i8qOw" name="Targeted queries" description="Multiple queries to a database can be used to learn more information by combining the results of these queries to infer additional knowledge.">
+            <characteristic href="linddun.threatknowledge#_1sSPasoWEeyJGPMVWHqlyQ"/>
+        </threatcharacteristic>
+        <threatcharacteristic xmi:id="_oUJPUCfrEe-jseb_ZxRTBA" name="Linkable Dataset" description="Data points in the dataset can be linked. Using this linked data together with (dis)similarities between users, it may become possible to learn sensitive information about the data subject.">
+            <characteristic href="linddun.threatknowledge#_1sSPe8oWEeyJGPMVWHqlyQ"/>
+        </threatcharacteristic>
+    </threat>
+    <threat xmi:id="_tYY83PCcEeuVsIWQ8i8qOw" name="Machine learning" description="Profiling users based on machine learning techniques" fullDescription="Machine learning techniques can be used to automatically construct profiles by combining multiple elements to link information to data subjects. For example, some AI models can be used to profile people based on the contents and writing style of their search prompts.">
+        <refs>
+            https://www.nccgroup.com/uk/promptly-profiled-decoding-personalities-through-ai-conversations/
+        </refs>
+        <threatcharacteristic xmi:id="_tYY83_CcEeuVsIWQ8i8qOw" name="Directly derived linkable properties" description="Linkable properties are derived directly from the data.">
+            <characteristic href="linddun.threatknowledge#_5P3fQJppEe2-QLTNWOlbZQ"/>
+        </threatcharacteristic>
+        <threatcharacteristic xmi:id="_tYY84PCcEeuVsIWQ8i8qOw" name="Indirectly derived linkable properties" description="Linkable properties are indirectly derived through message and timing patterns.">
+            <characteristic href="linddun.threatknowledge#_1sSPe8oWEeyJGPMVWHqlyQ"/>
+        </threatcharacteristic>
+    </threat>
+    <threat xmi:id="_EHgXEPCzEeuVsIWQ8i8qOw" name="Reusing username linked to identity" description="A data subject reusing a username that is already previously linked to their identity" fullDescription="When reusing a username across multiple websites, or even a username that contains the actual name of the data subject, a person might inadvertently be identified on multiple services even if they only revealed their true identity on one of these services.">
+        <refs>
+            https://blog.1password.com/when-to-use-random-usernames-online/
+        </refs>
+        <threatcharacteristic xmi:id="_I_FKAPCzEeuVsIWQ8i8qOw" name="Username is linked to identity" description="The username is already linked to the identity.">
+            <characteristic href="linddun.threatknowledge#_2YFOIZ4TEeycJfgSUGGgug"/>
+        </threatcharacteristic>
+        <threatcharacteristic xmi:id="_BUt8MFiREe-3qsMB96jUvw" name="Linking accounts across multiple services" description="Accounts can be linked across services because they have the same username">
+            <characteristic href="linddun.threatknowledge#_uUjqQfCcEeuVsIWQ8i8qOw"/>
+        </threatcharacteristic>
+    </threat>
+    <threat xmi:id="_NNlx0PCzEeuVsIWQ8i8qOw" name="Attributing Whistleblower Submission" description="Attributability of documents to a specific person can lead to prosecution/firing/... of whistleblowers." fullDescription="Metadata stored in a document or in an action log can lead to attributing a (leaked) document back to a specific person. This can in turn lead to the prosecution, termination, ... of whistleblowers.">
+        <refs>
+            https://securedrop.org/overview/limits-metadata-trail-much-possible/
+        </refs>
+        <threatcharacteristic xmi:id="_UJ5coPCzEeuVsIWQ8i8qOw" name="Logged communication" description="The communication of an employee with the whistleblower submission system may be logged.">
+            <characteristic href="linddun.threatknowledge#_2YF1TJ4TEeycJfgSUGGgug"/>
+        </threatcharacteristic>
+        <threatcharacteristic xmi:id="_V9DcUPCzEeuVsIWQ8i8qOw" name="Meta-data to link back to the whistleblower" description="Meta-data in the submitted document may expose additional information that can be used to trace back to the whistleblower.">
+            <characteristic href="linddun.threatknowledge#_2YF1Q54TEeycJfgSUGGgug"/>
+        </threatcharacteristic>
+        <threatcharacteristic xmi:id="_Xg0VIPCzEeuVsIWQ8i8qOw" name="Attributable action" description="The action of leaking may be attributed because the information the whistleblower submits is tailored to the whistleblower and can subsequently be attributed to that person.">
+            <characteristic href="linddun.threatknowledge#_2YF1R54TEeycJfgSUGGgug"/>
+        </threatcharacteristic>
+    </threat>
+    <threat xmi:id="_xy7-EPCzEeuVsIWQ8i8qOw" name="Attributed E-vote" description="Votes in a flawed digital voting system can potentially be attributed to the user to enable coercion/compensation/.." fullDescription="E-voting poses many challenges, such as building a robust system in which votes can never be attributed to the person who submitted it. In a flawed e-voting system, votes could be attributrd back to the voters, posing grave privacy challenges and potentially compromising the vote itself.">
+        <refs>
+            https://www.inria.fr/en/security-electronic-voting-digital-security-confidentiality
+        </refs>
+        <threatcharacteristic xmi:id="_LaM4cPE-EeuVsIWQ8i8qOw" name="Attribute vote" description="A vote can be attributed to the person making the vote. Published with an id linked to the voter.">
+            <characteristic href="linddun.threatknowledge#_2YF1TJ4TEeycJfgSUGGgug"/>
+        </threatcharacteristic>
+        <threatcharacteristic xmi:id="_-Lx54PE-EeuVsIWQ8i8qOw" name="Signed receipts" description="Signed receipts can be used to prove a vote was cast a certain way.">
+            <characteristic href="linddun.threatknowledge#_2YF1PZ4TEeycJfgSUGGgug"/>
+        </threatcharacteristic>
+    </threat>
+    <threat xmi:id="_6IBZsPCzEeuVsIWQ8i8qOw" name="Geo-tagged photos" description="Image files potentially contain metadata revealing personal data such as location details" fullDescription="Geolocation data stored in image files may inadvertently reveal information about the person who took the picture (e.g., where they live, where they work, which devices they own, etc.)">
+        <refs>
+            https://www.nytimes.com/2010/08/12/technology/personaltech/12basics.html
+        </refs>
+        <threatcharacteristic xmi:id="_V7ybkPC0EeuVsIWQ8i8qOw" name="Location information in meta-data" description="Location information in photos can provide additional information to make it harder to deny claims about the location a user has been.">
+            <characteristic href="linddun.threatknowledge#_2YF1Q54TEeycJfgSUGGgug"/>
+        </threatcharacteristic>
+        <threatcharacteristic xmi:id="_D-JtgFiaEe-3qsMB96jUvw" name="Unawareness of person taking photo that location is stored" description="The person taking the picture may not know their geolocation is collected and stored within the metadata of the photo.">
+            <characteristic href="linddun.threatknowledge#_2YHqYZ4TEeycJfgSUGGgug"/>
+        </threatcharacteristic>
+    </threat>
+    <threat xmi:id="_I-PnEPC0EeuVsIWQ8i8qOw" name="DKIM" description="DKIM signatures could be used by an adversary to try to prove legitimacy of a stolen sent email" fullDescription="DKIM provides long-term proof of authenticity for emails which enables adversaries that have stolen emails to prove their legitimacy in trying to, for example, blackmail a victim.">
+        <refs>
+            https://blog.cryptographyengineering.com/2020/11/16/ok-google-please-publish-your-dkim-secret-keys/
+        </refs>
+        <threatcharacteristic xmi:id="_xZOBEPC0EeuVsIWQ8i8qOw" name="Email signed by domain" description="Email messages contain signatures of the sending email server.">
+            <characteristic href="linddun.threatknowledge#_2YF1PZ4TEeycJfgSUGGgug"/>
+        </threatcharacteristic>
+        <threatcharacteristic xmi:id="_2SoAAPC0EeuVsIWQ8i8qOw" name="Email signature in meta-data" description="Email signature information is contained in the meta-data.">
+            <characteristic href="linddun.threatknowledge#_2YF1Q54TEeycJfgSUGGgug"/>
+        </threatcharacteristic>
+        <threatcharacteristic xmi:id="_6XGiEPC0EeuVsIWQ8i8qOw" name="Evidence of having sent email" description="Signed message by email provider provides evidence of having sent email.">
+            <characteristic href="linddun.threatknowledge#_2YF1TJ4TEeycJfgSUGGgug"/>
+        </threatcharacteristic>
+        <threatcharacteristic xmi:id="_e5WU4Hc0Ee-7rOjsYiuCuQ" name="Unawareness of digital signature" description="The sender of an email may not be aware that their emails are being digitally signed and can be used for non-repudiation.">
+            <characteristic href="linddun.threatknowledge#_2YHqYZ4TEeycJfgSUGGgug"/>
+        </threatcharacteristic>
+    </threat>
+    <threat xmi:id="_KbhdYPC0EeuVsIWQ8i8qOw" name="Profiling Revealing Sensitive Attributes In Advertisements" description="Targeted advertising based on the data subject's profiled attributes may reveal sensitive information about the person." fullDescription="The profiling of an individual can reveal sensitive attributes via the targeted ads that individual receives. For example, these ads may reveal sensitive attributes such as pregnancy, sexual orientation, etc.">
+        <refs>
+            https://www.forbes.com/sites/kashmirhill/2012/02/16/how-target-figured-out-a-teen-girl-was-pregnant-before-her-father-did/
+        </refs>
+        <threatcharacteristic xmi:id="_igmW0PE_EeuVsIWQ8i8qOw" name="Previous actions are profiled" description="By being assigned to a certain profiled group, the data subject may no longer deny certain claims about them. For example, a person consistently getting ads for a gambling site may no longer be able to hide that they frequented such websites in the past.">
+            <characteristic href="linddun.threatknowledge#_2YF1TJ4TEeycJfgSUGGgug"/>
+        </threatcharacteristic>
+        <threatcharacteristic xmi:id="_pcX2IPE_EeuVsIWQ8i8qOw" name="Types of ads served" description="The type of ads servied to the user reveal sensitive attributes.">
+            <characteristic href="linddun.threatknowledge#_2YF1NZ4TEeycJfgSUGGgug"/>
+        </threatcharacteristic>
+        <threatcharacteristic xmi:id="_S5oSAHmOEe-7rOjsYiuCuQ" name="Profiling the individual for targeted advertising" description="The data subject is profiled in order to target them with personalised ads. This profiling may reveal (sensitive) attributes about the data subject, such as their medical history or political views.">
+            <characteristic href="linddun.threatknowledge#_5P3fQJppEe2-QLTNWOlbZQ"/>
+        </threatcharacteristic>
+    </threat>
+    <threat xmi:id="_MllhMPC0EeuVsIWQ8i8qOw" name="Publishing Watermarked Information" description="Watermarks in leaked/published documents may reveal personal information about who published it." fullDescription="Watermarking technologies such as printer dots can lead to attributing a (leaked) document back to a specific person. This can in turn lead to the prosecution, termination, ... of whistleblowers.">
+        <refs>
+            https://www.bleepingcomputer.com/news/security/researcher-wants-to-protect-whistleblowers-against-hidden-printer-dots/
+        </refs>
+        <threatcharacteristic xmi:id="_vQe9gPC1EeuVsIWQ8i8qOw" name="Attribute data to recipient" description="The publishing of the watermarked information can be attributed to the individual that received the data.">
+            <characteristic href="linddun.threatknowledge#_2YF1TJ4TEeycJfgSUGGgug"/>
+        </threatcharacteristic>
+        <threatcharacteristic xmi:id="__IEGgPE_EeuVsIWQ8i8qOw" name="Meta-data to attribute recipient" description="The data can contain meta-data to attribute the recipient of the data.">
+            <characteristic href="linddun.threatknowledge#_2YF1Q54TEeycJfgSUGGgug"/>
+        </threatcharacteristic>
+        <threatcharacteristic xmi:id="_kh7f8PFAEeuVsIWQ8i8qOw" name="Embedded data on the recipient" description="The published information can contain hidden patterns or watermarks to track the origin of the data.">
+            <characteristic href="linddun.threatknowledge#_2YF1R54TEeycJfgSUGGgug"/>
+        </threatcharacteristic>
+    </threat>
+    <threat xmi:id="_Qrp-sPC0EeuVsIWQ8i8qOw" name="Linkedin contact suggestion reveals profile viewers" description="LinkedIn suggests you to connect with a person, because that person looked you up." fullDescription="Professional social network LinkedIn has a feature that suggest connections based on who visited your profile (and in some cases outright reveals that a person visited your profile). A person who knows such suggestions are based on profile visits may deduce that the suggested people visited their profile at some point in the past.">
+        <refs>
+            https://www.linkedin.com/help/linkedin/answer/a540651
+        </refs>
+        <threatcharacteristic xmi:id="_xR7Q0PC1EeuVsIWQ8i8qOw" name="Attribution of actions due to side-effects" description="Appearing in the suggested connections of a person based on profile views is a side effect of the action of viewing someones profile.">
+            <characteristic href="linddun.threatknowledge#_2YF1TJ4TEeycJfgSUGGgug"/>
+        </threatcharacteristic>
+        <threatcharacteristic xmi:id="_MvWdkFZOEe-3qsMB96jUvw" name="Data subject is unaware their visit to someone's profile is disclosed to that person" description="The person visiting someone's profile may not be aware that this action may cause a side effect that indicates to the other person that they visited their profile.">
+            <characteristic href="linddun.threatknowledge#_2YHqYZ4TEeycJfgSUGGgug"/>
+        </threatcharacteristic>
+    </threat>
+    <threat xmi:id="_NkQTcPC1EeuVsIWQ8i8qOw" name="Traditional encrypted data volumes reveal the existence of data" description="Having an encrypted data volume shows the presence of data, potentially including the amount of data" fullDescription="By detecting the existence of an encrypted data volume, an attacker could coerce the data owner into revealing the password by force. Hidden encrypted volumes can provide a solution to this, as the owner of the data can plausibly deny the existence of the data stored within the volume.">
+        <refs>https://veracrypt.eu/en/Hidden%20Volume.html</refs>
+        <threatcharacteristic xmi:id="_0kmigPC1EeuVsIWQ8i8qOw" name="Data owner cannot deny existence of the encrypted information" description="The owner of the data cannot deny the existence of the data stored in a traditional encrypted data volume.">
+            <characteristic href="linddun.threatknowledge#_2YF1NZ4TEeycJfgSUGGgug"/>
+        </threatcharacteristic>
+        <threatcharacteristic xmi:id="_0-xSsHmLEe-7rOjsYiuCuQ" name="Use of encryption software creates a detectable encrypted data volume" description="The use of encryption software to create an encrypted data volume enables the detection of this volume. This reveals the existence of the data, and potentially leaks how much data is stored within it.">
+            <characteristic href="linddun.threatknowledge#_uUkRY_CcEeuVsIWQ8i8qOw"/>
+        </threatcharacteristic>
+    </threat>
+    <threat xmi:id="_px8tsPC0EeuVsIWQ8i8qOw" name="Contact tracing" description="Detecting over bluetooth whether someone is running contact tracing application." fullDescription="COVID-19 contact tracing apps transmit short randomized tokens periodically. By receiving such a token in an area with very few other people, the original sender of such a token may be identified again by those who received the token. In doing so, the observer can infer that a person is using the tracing application, and this can potentially be linked at a later time to other data points, for example to try to link a positive test result to a specific person.">
+        <refs>
+            https://theintercept.com/2020/05/05/coronavirus-bluetooth-contact-tracing/
+        </refs>
+        <threatcharacteristic xmi:id="_DZAMcCifEe-jseb_ZxRTBA" name="Observable bluetooth LE signal" description="Bluetooth LE signals can be observed and intercepted by anyone within range." fullDescription="The presence of the bluetooth LE signal used for contact tracing can be detected by anyone within range, therefore enabling them to learn that a person is in the area and that they are running the contact tracing application.">
+            <characteristic href="linddun.threatknowledge#_uUkRWfCcEeuVsIWQ8i8qOw"/>
+        </threatcharacteristic>
+        <threatcharacteristic xmi:id="_ZQCjwIGMEe-e26hPj1p-NA" name="Inference of token sender" description="The observer can infer who sent a detected token by linking to contextual data" fullDescription="The observer of the sent token can infer who the sender is if there are not that many others in the same area by linking the detection to contextual data.">
+            <characteristic href="linddun.threatknowledge#_5P3fQJppEe2-QLTNWOlbZQ"/>
+        </threatcharacteristic>
+    </threat>
+    <threat xmi:id="_a1nuAPT2EeuXhdGAWaPunw" name="SSO provider can link service use" description="An SSO service provider can link users' usages of different services." fullDescription="Single-sign on providers receive information about the user's logins on multiple different other services, as they are acting as the identity provider in this situation. This puts them in a central position to link logins together and learn which services the data subject uses. This reveals more (potentially sensitive) personal information about the user.">
+        <refs>
+            https://medium.com/@eduardofeo75/single-sign-on-balancing-privacy-security-and-user-experience-9555786b5e85
+        </refs>
+        <threatcharacteristic xmi:id="_i4KoIPT2EeuXhdGAWaPunw" name="SSO identifiers" description="SSO uses unique identifiers for performing the single sign on, which enables linking sign on requests for different services to each other and track the user across multiple platforms.">
+            <characteristic href="linddun.threatknowledge#_uUjqQfCcEeuVsIWQ8i8qOw"/>
+        </threatcharacteristic>
+        <threatcharacteristic xmi:id="_bKg28IGNEe-e26hPj1p-NA" name="Overprocessing of data by the SSO provider" description="The SSO provider processes the personal data for purposes not necessary to deliver the sign-on service" fullDescription="The SSO provider potentially processes the personal data for purposes other than delivery of the sign-on service (e.g., tracking the user across multiple services by linking their logins).">
+            <characteristic href="linddun.threatknowledge#_2YCx854TEeycJfgSUGGgug"/>
+        </threatcharacteristic>
+    </threat>
+    <threat xmi:id="_-KxoQPT3EeuXhdGAWaPunw" name="FLoC Browser tracking" description="Federated Learning of Cohorts (FLoC) privacy sandboxing profiles users based on their browsing history" fullDescription="The FLoC privacy sandbox, while marketed as a privacy enhancing technology, has received criticism that it has design flaws that may allow for profiling and tracking of users based on their Cohort ID">
+        <refs>
+            https://privacysandbox.com/intl/en_us/proposals/floc/
+        </refs>
+        <refs>
+            https://blog.mozilla.org/en/privacy-security/privacy-analysis-of-floc/
+        </refs>
+        <threatcharacteristic xmi:id="_RmFxcPT4EeuXhdGAWaPunw" name="Track activity to local user" description="Link local browsing activity to a user.">
+            <characteristic href="linddun.threatknowledge#_uUjqQfCcEeuVsIWQ8i8qOw"/>
+        </threatcharacteristic>
+        <threatcharacteristic xmi:id="_R0968PT4EeuXhdGAWaPunw" name="Analyze browsing data for patterns" description="Analyze and link browsing data through patterns to assign FLoC cohort.">
+            <characteristic href="linddun.threatknowledge#_1sSPe8oWEeyJGPMVWHqlyQ"/>
+        </threatcharacteristic>
+        <threatcharacteristic xmi:id="_SCYE0PT4EeuXhdGAWaPunw" name="Indirectly link through others in FLoC cohort." description="Indirectly link browsing behavior through other users in the cohort">
+            <characteristic href="linddun.threatknowledge#_2YFOIJ4TEeycJfgSUGGgug"/>
+        </threatcharacteristic>
+        <threatcharacteristic xmi:id="_rM3OkHmdEe-7rOjsYiuCuQ" name="User is profiled locally" description="The user is profiled locally on their own device">
+            <characteristic href="linddun.threatknowledge#_5P3fQJppEe2-QLTNWOlbZQ"/>
+        </threatcharacteristic>
+    </threat>
+    <threat xmi:id="_cQ1pEAWwEeyF-8dXruHdvg" name="Password managers automatically fills in identifying information" description="By automatically filling in personal information, the information is available for java script running in the page to retrieve and process it." fullDescription="Some websites already collect information filled in a webform even before it is submitted. This means that auto-filled information (e.g., by a password manager), could already be collected even if the user never intended to click submit on the form.">
+        <refs>
+            https://gizmodo.com/before-you-hit-submit-this-company-has-already-logge-1795906081
+        </refs>
+        <threatcharacteristic xmi:id="_4fugsAWwEeyF-8dXruHdvg" name="Page contains forms fields for personal data" description="Form fields requesting personal data are present.">
+            <characteristic href="linddun.threatknowledge#_uUkROfCcEeuVsIWQ8i8qOw"/>
+        </threatcharacteristic>
+        <threatcharacteristic xmi:id="_9Py9cAWwEeyF-8dXruHdvg" name="Webpage scripts proces the information that is entered locally" description="Scripts in the page can already access the information entered in the form fields before submission.">
+            <characteristic href="linddun.threatknowledge#_2YHqYZ4TEeycJfgSUGGgug"/>
+        </threatcharacteristic>
+    </threat>
+    <threat xmi:id="_eXGyAgWwEeyF-8dXruHdvg" name="Logging actions" description="Logging user actions prevents plausible deniability." fullDescription="Event or action logs can be used to prove that a user has taken certain actions, leaving them a weakened plausible deniability (or none at all, depending on the strength/credibility of the logs).">
+        <refs>
+            https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon
+        </refs>
+        <refs>
+            https://www.kyberturvallisuuskeskus.fi/en/ncsc-news/instructions-and-guides/collecting-and-using-log-data
+        </refs>
+        <threatcharacteristic xmi:id="_TXyQoBucEeyCrP7pH1WRIw" name="Action logging" description="Taking certain actions in the system may lead to that action being logged as a side-effect.">
+            <characteristic href="linddun.threatknowledge#_2YF1TJ4TEeycJfgSUGGgug"/>
+        </threatcharacteristic>
+        <threatcharacteristic xmi:id="_ATrv8HmhEe-7rOjsYiuCuQ" name="Logged data causes non-repudiation" description="Logged data makes it harder (or impossible) to deny certain actions have taken place.">
+            <characteristic href="linddun.threatknowledge#_2YF1NZ4TEeycJfgSUGGgug"/>
+        </threatcharacteristic>
+    </threat>
+    <threat xmi:id="_eXGyCAWwEeyF-8dXruHdvg" name="Context data from wearable or implanted (smart) devices" description="Observing communications from wearable or implanted (smart) devices may reveal that a person nearby is using such device." fullDescription="Observing communications from wearable or implanted (smart) devices such as a smartwatch, or even a smart pacemaker or insulin pump, may reveal that a person nearby is using such device. This can in turn leak additional information about the person, for example that they have a specific medical condition.">
+        <refs>
+            https://www.sciencedirect.com/science/article/pii/S153204641500074X
+        </refs>
+        <threatcharacteristic xmi:id="_0PMrMBufEeyCrP7pH1WRIw" name="Contextual data from sensors in communication meta-data" description="Contextual data form sensors in communication meta-data can lead to detectability threats.">
+            <characteristic href="linddun.threatknowledge#_uUkRWfCcEeuVsIWQ8i8qOw"/>
+        </threatcharacteristic>
+        <threatcharacteristic xmi:id="_Fb7xwFY3Ee-3qsMB96jUvw" name="Inferred sensitive information from context data" description="Using contextual data to infer more about a data subject may lead to the unwanted discovery of sensitive information.">
+            <characteristic href="linddun.threatknowledge#_5P3fQJppEe2-QLTNWOlbZQ"/>
+        </threatcharacteristic>
+    </threat>
+    <threat xmi:id="_U9gP4KbfEe2gYLFfcb8-Vw" name="Linkable data from multiple users" description="Data from multiple users are linked by by combining multiple records or datasets." fullDescription="When data from multiple individuals is combined, this can be used to profile them as a group. For example, comparing records of people living in the same neighborhood may lead to attributes (such as income level, energy consumption, etc.) being assigned to the entire neighborhood altogether.">
+        <refs>
+            https://www.aepd.es/en/prensa-y-comunicacion/blog/group-privacy
+        </refs>
+        <threatcharacteristic xmi:id="_U9gP4abfEe2gYLFfcb8-Vw" name="Linking data from separate data subjects" description="Data points pertaining different data subjects within the data set are linked in order to create new knowledge.">
+            <characteristic href="linddun.threatknowledge#_1sSPasoWEeyJGPMVWHqlyQ"/>
+        </threatcharacteristic>
+        <threatcharacteristic xmi:id="_U9gP46bfEe2gYLFfcb8-Vw" name="Inferring information about a group of data subjects at once." description="The inferred information about multiple individuals is used to profile the group of people as a whole.">
+            <characteristic href="linddun.threatknowledge#_2YFOIJ4TEeycJfgSUGGgug"/>
+        </threatcharacteristic>
+    </threat>
+    <threat xmi:id="_KuJMEIJGEe-e26hPj1p-NA" name="Push notification payloads expose sensitive information" description="The payload field of push notifications is often not encrypted, which leads to overexposure of the potentially sensitive data within it." fullDescription="While most push notification service providers such as Apple Push Notification Service (APNs), or Firebase Cloud Messaging (FCM) strongly recommend the encryption of the payload of push notifications to mobile phones, this is quite often neglected. When this payload is not encrypted, sensitive data such as the contents of personal messages can be exposed to the providers of such services. Often, the owner of the mobile device is not aware that the contents of their notifications may be overly exposed.">
+        <refs>
+            https://blog.phnx.im/privacy-of-push-notifications/
+        </refs>
+        <threatcharacteristic xmi:id="_f5d6UIJGEe-e26hPj1p-NA" name="Data excessively available to push notification providers" description="The unencrypted payloads of push notifications cause the information within to be overly accessible (i.e., to the providers of push notification services)." fullDescription="The unencrypted payloads of push notifications cause the information within to be overly accessible (i.e., to the providers of push notification services).">
+            <characteristic href="linddun.threatknowledge#_2YCyBp4TEeycJfgSUGGgug"/>
+        </threatcharacteristic>
+        <threatcharacteristic xmi:id="_JiXgAIJHEe-e26hPj1p-NA" name="User is unaware of overexposure of their data" description="The user is often not aware that the push notification service provider has access to the unencrypted payload data." fullDescription="The user is often not aware that the push notification service provider has access to the unencrypted payload data.">
+            <characteristic href="linddun.threatknowledge#_2YHqYZ4TEeycJfgSUGGgug"/>
+        </threatcharacteristic>
+        <threatcharacteristic xmi:id="_m3V18IJHEe-e26hPj1p-NA" name="Lacking Encryption indicates insufficient cybersecurity risk management" description="The lack of encryption of notification payloads is an indication that the system was not designed according to cyber security standards and best practices." fullDescription="The lack of encryption of notification payloads is an indication that the system was not designed according to cyber security standards and best practices.">
+            <characteristic href="linddun.threatknowledge#_1sSPj8oWEeyJGPMVWHqlyQ"/>
+        </threatcharacteristic>
+    </threat>
+</threatknowledge:ThreatCollection>

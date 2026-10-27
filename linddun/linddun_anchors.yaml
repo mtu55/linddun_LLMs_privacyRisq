@@ -1,0 +1,583 @@
+anchors:
+- case: Covid Contact Tracing Info Sold (Netherlands)
+  summary: Information collected by the Dutch government for covid contact tracing was leaked and sold
+    online
+  detail: Millions of records from the CoronIT and HPZone systems used in the Netherlands to track, respectively,
+    corona test results and contact tracing information; have been sold and exchanged between criminals.
+  refs:
+  - https://www.computerweekly.com/news/252495983/Data-of-thousands-of-Dutch-citizens-leaked-from-government-Covid-19-systems
+  categories:
+  - DD
+  characteristics:
+  - indicator: Storage/processing personal data
+    rationale: Storage and processing of extensive amounts of personal data.
+    category: DD
+    node_id: DD.excessive_volume.amount
+    node_path: Excessive volume > Amount
+  - indicator: Transfer of personal information to third parties but legitimate users of the system.
+    rationale: 'Legitimate users had access to all the data and could export it. As a result, this sensitive
+      data was sold by malicious insiders. This threat would not necessarily be found with the classic
+      STRIDE information disclosure threat as there was no breach of the system. '
+    category: DD
+    node_id: DD.involved_parties_and_exposure.involved_parties
+    node_path: Involved parties and exposure > Involved parties
+  - indicator: Storage/processing personal data
+    rationale: Storage and processing of personal data pertaining an excessive number of data subjects.
+    category: DD
+    node_id: DD.excessive_volume.involved_data_subjects
+    node_path: Excessive volume > Involved data subjects
+- case: Facebook Data Leak (500 Million Records)
+  summary: Facebook data leak of 500 million people’s records.
+  detail: In 2021, a data leak at social media platform Facebook led to the unauthorized disclosure of
+    over 500 million records, including full names, phone numbers, locations and birth dates of the involved
+    data subjects.
+  refs:
+  - https://www.theverge.com/2022/11/28/23481786/meta-fine-facebook-data-leak-ireland-dpc-gdpr
+  categories:
+  - DD
+  - I
+  - L
+  characteristics:
+  - indicator: Data disclosed by data subject
+    rationale: Data containing identity details is directly collected from the data subject.
+    category: I
+    node_id: I.identified_information.processing_of_identified_data
+    node_path: Identified information > Processing of identified data
+  - indicator: Stored for a long time
+    rationale: This breach also affected former users who already had their account deleted. Despite this
+      'deletion', the social network had retained their data after all, which meant they were still affected
+      by the breach.
+    category: DD
+    node_id: DD.unnecessary_processing.duration_retention
+    node_path: Unnecessary processing > Duration/retention
+  - indicator: Query interface for phone numbers
+    rationale: 'The dataset could be queried for phone number, allowing to find the corresponding user
+      account. In this way, an adversary could use the phone number as a unique identifier to link accounts
+      to actual data subjects, and potentially other data that is known about this person. '
+    category: L
+    node_id: L.linked_data.unique_identifier
+    node_path: Linked data > Unique identifier
+- case: Browser Fingerprinting
+  summary: A profile of the browser is constructed by relying on numerous quasi-identifiers and derived
+    properties.
+  detail: 'Various characteristics of a user''s browser (such as screen resolution, installed plugins,
+    user agent, etc.) can be used to form a unique fingerprint of this browser and therefore identify
+    the user across multiple websites. '
+  refs:
+  - https://coveryourtracks.eff.org/
+  categories:
+  - I
+  - L
+  characteristics:
+  - indicator: Browser properties as quasi-identifiers
+    rationale: A combination of browser properties can be used as a quasi-identifier. For example, the
+      user agent, language, window size, extensions, supported features, etc.
+    category: L
+    node_id: L.linkable_data.through_combination.quasi_identifier_combining_data_of_a_single_individual
+    node_path: Linkable data > Through Combination > Quasi-identifier combining data of a single individual
+  - indicator: Derive fingerprint
+    rationale: A fingerprint can be derived by rendering text and graphics and exploiting the fact that
+      different physical devices will render these slightly differently. This allows distinguishing physcal
+      devices, and by extension the users of said devices, from others.
+    category: I
+    node_id: I.identifiable_information.the_data_subject_is_distinguishable_from_others
+    node_path: Identifiable information > The data subject is distinguishable from others
+- case: Social network gap
+  summary: Social network tracking data subjects that do not have an account at this service
+  detail: Regardless of a user’s presence on a social network, these networks can learn a lot about that
+    user by combining the information they learn indirectly through the other users.
+  refs:
+  - https://www.vox.com/2018/4/20/17254312/facebook-shadow-profiles-data-collection-non-users-mark-zuckerberg
+  - https://www.theguardian.com/technology/2018/apr/17/facebook-admits-tracking-users-and-non-users-off-site
+  categories:
+  - L
+  - U
+  characteristics:
+  - indicator: Combine indirect links
+    rationale: Indirect links to the person not present on the network are combined. (Person is present
+      in contact list of existing users on the network.)
+    category: L
+    node_id: L.linkable_data.through_profiling_derivation_or_inference
+    node_path: Linkable data > Through Profiling, derivation, or inference
+  - indicator: Data subject unaware their data is being processed
+    rationale: The data subject does not know their data is being processed, as they never interacted
+      with the social network. Their information is processed via the profiles of their friends.
+    category: U
+    node_id: U.unawareness_of_processing.unawareness_as_data_subject
+    node_path: Unawareness of processing > Unawareness as data subject
+- case: DB Query inference
+  summary: Information obtained from consecutive DB queries can be used for profiling data subjects
+  detail: By querying a database for multiple different pieces of information, further data could be inferred
+    than what is strictly stored in the database. This could then be used to profile data subjects or
+    learn sensitive information.
+  refs:
+  - https://en.wikipedia.org/wiki/Inference_attack
+  categories:
+  - L
+  characteristics:
+  - indicator: Targeted queries
+    rationale: Multiple queries to a database can be used to learn more information by combining the results
+      of these queries to infer additional knowledge.
+    category: L
+    node_id: L.linkable_data.through_combination.combining_data_of_different_individuals
+    node_path: Linkable data > Through Combination > Combining data of different individuals
+  - indicator: Linkable Dataset
+    rationale: Data points in the dataset can be linked. Using this linked data together with (dis)similarities
+      between users, it may become possible to learn sensitive information about the data subject.
+    category: L
+    node_id: L.linkable_data.through_profiling_derivation_or_inference.profiling_an_individual_through_dis_similarity
+    node_path: Linkable data > Through Profiling, derivation, or inference > Profiling an individual through
+      (dis)similarity
+- case: Machine learning
+  summary: Profiling users based on machine learning techniques
+  detail: Machine learning techniques can be used to automatically construct profiles by combining multiple
+    elements to link information to data subjects. For example, some AI models can be used to profile
+    people based on the contents and writing style of their search prompts.
+  refs:
+  - https://www.nccgroup.com/uk/promptly-profiled-decoding-personalities-through-ai-conversations/
+  categories:
+  - L
+  characteristics:
+  - indicator: Directly derived linkable properties
+    rationale: Linkable properties are derived directly from the data.
+    category: L
+    node_id: L.linkable_data.through_profiling_derivation_or_inference.profiling_an_individual
+    node_path: Linkable data > Through Profiling, derivation, or inference > Profiling an individual
+  - indicator: Indirectly derived linkable properties
+    rationale: Linkable properties are indirectly derived through message and timing patterns.
+    category: L
+    node_id: L.linkable_data.through_profiling_derivation_or_inference.profiling_an_individual_through_dis_similarity
+    node_path: Linkable data > Through Profiling, derivation, or inference > Profiling an individual through
+      (dis)similarity
+- case: Reusing username linked to identity
+  summary: A data subject reusing a username that is already previously linked to their identity
+  detail: When reusing a username across multiple websites, or even a username that contains the actual
+    name of the data subject, a person might inadvertently be identified on multiple services even if
+    they only revealed their true identity on one of these services.
+  refs:
+  - https://blog.1password.com/when-to-use-random-usernames-online/
+  categories:
+  - I
+  - L
+  characteristics:
+  - indicator: Username is linked to identity
+    rationale: The username is already linked to the identity.
+    category: I
+    node_id: I.identifiable_information.pseudonym.identifier
+    node_path: Identifiable information > Pseudonym > Identifier
+  - indicator: Linking accounts across multiple services
+    rationale: Accounts can be linked across services because they have the same username
+    category: L
+    node_id: L.linked_data.unique_identifier
+    node_path: Linked data > Unique identifier
+- case: Attributing Whistleblower Submission
+  summary: Attributability of documents to a specific person can lead to prosecution/firing/... of whistleblowers.
+  detail: Metadata stored in a document or in an action log can lead to attributing a (leaked) document
+    back to a specific person. This can in turn lead to the prosecution, termination, ... of whistleblowers.
+  refs:
+  - https://securedrop.org/overview/limits-metadata-trail-much-possible/
+  categories:
+  - Nr
+  characteristics:
+  - indicator: Logged communication
+    rationale: The communication of an employee with the whistleblower submission system may be logged.
+    category: Nr
+    node_id: Nr.attributable_action_side_effect_evidence
+    node_path: Attributable action side-effect evidence
+  - indicator: Meta-data to link back to the whistleblower
+    rationale: Meta-data in the submitted document may expose additional information that can be used
+      to trace back to the whistleblower.
+    category: Nr
+    node_id: Nr.attributable_data_evidence.metadata
+    node_path: Attributable data evidence > Metadata
+  - indicator: Attributable action
+    rationale: The action of leaking may be attributed because the information the whistleblower submits
+      is tailored to the whistleblower and can subsequently be attributed to that person.
+    category: Nr
+    node_id: Nr.attributable_data_evidence.embedded_hidden_data
+    node_path: Attributable data evidence > Embedded/Hidden Data
+- case: Attributed E-vote
+  summary: Votes in a flawed digital voting system can potentially be attributed to the user to enable
+    coercion/compensation/..
+  detail: E-voting poses many challenges, such as building a robust system in which votes can never be
+    attributed to the person who submitted it. In a flawed e-voting system, votes could be attributrd
+    back to the voters, posing grave privacy challenges and potentially compromising the vote itself.
+  refs:
+  - https://www.inria.fr/en/security-electronic-voting-digital-security-confidentiality
+  categories:
+  - Nr
+  characteristics:
+  - indicator: Attribute vote
+    rationale: A vote can be attributed to the person making the vote. Published with an id linked to
+      the voter.
+    category: Nr
+    node_id: Nr.attributable_action_side_effect_evidence
+    node_path: Attributable action side-effect evidence
+  - indicator: Signed receipts
+    rationale: Signed receipts can be used to prove a vote was cast a certain way.
+    category: Nr
+    node_id: Nr.attributable_data_evidence.signed_data
+    node_path: Attributable data evidence > Signed data
+- case: Geo-tagged photos
+  summary: Image files potentially contain metadata revealing personal data such as location details
+  detail: Geolocation data stored in image files may inadvertently reveal information about the person
+    who took the picture (e.g., where they live, where they work, which devices they own, etc.)
+  refs:
+  - https://www.nytimes.com/2010/08/12/technology/personaltech/12basics.html
+  categories:
+  - Nr
+  - U
+  characteristics:
+  - indicator: Location information in meta-data
+    rationale: Location information in photos can provide additional information to make it harder to
+      deny claims about the location a user has been.
+    category: Nr
+    node_id: Nr.attributable_data_evidence.metadata
+    node_path: Attributable data evidence > Metadata
+  - indicator: Unawareness of person taking photo that location is stored
+    rationale: The person taking the picture may not know their geolocation is collected and stored within
+      the metadata of the photo.
+    category: U
+    node_id: U.unawareness_of_processing.unawareness_as_data_subject
+    node_path: Unawareness of processing > Unawareness as data subject
+- case: DKIM
+  summary: DKIM signatures could be used by an adversary to try to prove legitimacy of a stolen sent email
+  detail: DKIM provides long-term proof of authenticity for emails which enables adversaries that have
+    stolen emails to prove their legitimacy in trying to, for example, blackmail a victim.
+  refs:
+  - https://blog.cryptographyengineering.com/2020/11/16/ok-google-please-publish-your-dkim-secret-keys/
+  categories:
+  - Nr
+  - U
+  characteristics:
+  - indicator: Email signed by domain
+    rationale: Email messages contain signatures of the sending email server.
+    category: Nr
+    node_id: Nr.attributable_data_evidence.signed_data
+    node_path: Attributable data evidence > Signed data
+  - indicator: Email signature in meta-data
+    rationale: Email signature information is contained in the meta-data.
+    category: Nr
+    node_id: Nr.attributable_data_evidence.metadata
+    node_path: Attributable data evidence > Metadata
+  - indicator: Evidence of having sent email
+    rationale: Signed message by email provider provides evidence of having sent email.
+    category: Nr
+    node_id: Nr.attributable_action_side_effect_evidence
+    node_path: Attributable action side-effect evidence
+  - indicator: Unawareness of digital signature
+    rationale: The sender of an email may not be aware that their emails are being digitally signed and
+      can be used for non-repudiation.
+    category: U
+    node_id: U.unawareness_of_processing.unawareness_as_data_subject
+    node_path: Unawareness of processing > Unawareness as data subject
+- case: Profiling Revealing Sensitive Attributes In Advertisements
+  summary: Targeted advertising based on the data subject's profiled attributes may reveal sensitive information
+    about the person.
+  detail: The profiling of an individual can reveal sensitive attributes via the targeted ads that individual
+    receives. For example, these ads may reveal sensitive attributes such as pregnancy, sexual orientation,
+    etc.
+  refs:
+  - https://www.forbes.com/sites/kashmirhill/2012/02/16/how-target-figured-out-a-teen-girl-was-pregnant-before-her-father-did/
+  categories:
+  - L
+  - Nr
+  characteristics:
+  - indicator: Previous actions are profiled
+    rationale: By being assigned to a certain profiled group, the data subject may no longer deny certain
+      claims about them. For example, a person consistently getting ads for a gambling site may no longer
+      be able to hide that they frequented such websites in the past.
+    category: Nr
+    node_id: Nr.attributable_action_side_effect_evidence
+    node_path: Attributable action side-effect evidence
+  - indicator: Types of ads served
+    rationale: The type of ads servied to the user reveal sensitive attributes.
+    category: Nr
+    node_id: Nr.attributable_data_evidence.data
+    node_path: Attributable data evidence > Data
+  - indicator: Profiling the individual for targeted advertising
+    rationale: The data subject is profiled in order to target them with personalised ads. This profiling
+      may reveal (sensitive) attributes about the data subject, such as their medical history or political
+      views.
+    category: L
+    node_id: L.linkable_data.through_profiling_derivation_or_inference.profiling_an_individual
+    node_path: Linkable data > Through Profiling, derivation, or inference > Profiling an individual
+- case: Publishing Watermarked Information
+  summary: Watermarks in leaked/published documents may reveal personal information about who published
+    it.
+  detail: Watermarking technologies such as printer dots can lead to attributing a (leaked) document back
+    to a specific person. This can in turn lead to the prosecution, termination, ... of whistleblowers.
+  refs:
+  - https://www.bleepingcomputer.com/news/security/researcher-wants-to-protect-whistleblowers-against-hidden-printer-dots/
+  categories:
+  - Nr
+  characteristics:
+  - indicator: Attribute data to recipient
+    rationale: The publishing of the watermarked information can be attributed to the individual that
+      received the data.
+    category: Nr
+    node_id: Nr.attributable_action_side_effect_evidence
+    node_path: Attributable action side-effect evidence
+  - indicator: Meta-data to attribute recipient
+    rationale: The data can contain meta-data to attribute the recipient of the data.
+    category: Nr
+    node_id: Nr.attributable_data_evidence.metadata
+    node_path: Attributable data evidence > Metadata
+  - indicator: Embedded data on the recipient
+    rationale: The published information can contain hidden patterns or watermarks to track the origin
+      of the data.
+    category: Nr
+    node_id: Nr.attributable_data_evidence.embedded_hidden_data
+    node_path: Attributable data evidence > Embedded/Hidden Data
+- case: Linkedin contact suggestion reveals profile viewers
+  summary: LinkedIn suggests you to connect with a person, because that person looked you up.
+  detail: Professional social network LinkedIn has a feature that suggest connections based on who visited
+    your profile (and in some cases outright reveals that a person visited your profile). A person who
+    knows such suggestions are based on profile visits may deduce that the suggested people visited their
+    profile at some point in the past.
+  refs:
+  - https://www.linkedin.com/help/linkedin/answer/a540651
+  categories:
+  - Nr
+  - U
+  characteristics:
+  - indicator: Attribution of actions due to side-effects
+    rationale: Appearing in the suggested connections of a person based on profile views is a side effect
+      of the action of viewing someones profile.
+    category: Nr
+    node_id: Nr.attributable_action_side_effect_evidence
+    node_path: Attributable action side-effect evidence
+  - indicator: Data subject is unaware their visit to someone's profile is disclosed to that person
+    rationale: The person visiting someone's profile may not be aware that this action may cause a side
+      effect that indicates to the other person that they visited their profile.
+    category: U
+    node_id: U.unawareness_of_processing.unawareness_as_data_subject
+    node_path: Unawareness of processing > Unawareness as data subject
+- case: Traditional encrypted data volumes reveal the existence of data
+  summary: Having an encrypted data volume shows the presence of data, potentially including the amount
+    of data
+  detail: By detecting the existence of an encrypted data volume, an attacker could coerce the data owner
+    into revealing the password by force. Hidden encrypted volumes can provide a solution to this, as
+    the owner of the data can plausibly deny the existence of the data stored within the volume.
+  refs:
+  - https://veracrypt.eu/en/Hidden%20Volume.html
+  categories:
+  - D
+  - Nr
+  characteristics:
+  - indicator: Data owner cannot deny existence of the encrypted information
+    rationale: The owner of the data cannot deny the existence of the data stored in a traditional encrypted
+      data volume.
+    category: Nr
+    node_id: Nr.attributable_data_evidence.data
+    node_path: Attributable data evidence > Data
+  - indicator: Use of encryption software creates a detectable encrypted data volume
+    rationale: The use of encryption software to create an encrypted data volume enables the detection
+      of this volume. This reveals the existence of the data, and potentially leaks how much data is stored
+      within it.
+    category: D
+    node_id: D.application_side_effect
+    node_path: Application side effect
+- case: Contact tracing
+  summary: Detecting over bluetooth whether someone is running contact tracing application.
+  detail: COVID-19 contact tracing apps transmit short randomized tokens periodically. By receiving such
+    a token in an area with very few other people, the original sender of such a token may be identified
+    again by those who received the token. In doing so, the observer can infer that a person is using
+    the tracing application, and this can potentially be linked at a later time to other data points,
+    for example to try to link a positive test result to a specific person.
+  refs:
+  - https://theintercept.com/2020/05/05/coronavirus-bluetooth-contact-tracing/
+  categories:
+  - D
+  - L
+  characteristics:
+  - indicator: Observable bluetooth LE signal
+    rationale: Bluetooth LE signals can be observed and intercepted by anyone within range.
+    category: D
+    node_id: D.observed_communications
+    node_path: Observed communications
+  - indicator: Inference of token sender
+    rationale: The observer can infer who sent a detected token by linking to contextual data
+    category: L
+    node_id: L.linkable_data.through_profiling_derivation_or_inference.profiling_an_individual
+    node_path: Linkable data > Through Profiling, derivation, or inference > Profiling an individual
+- case: SSO provider can link service use
+  summary: An SSO service provider can link users' usages of different services.
+  detail: Single-sign on providers receive information about the user's logins on multiple different other
+    services, as they are acting as the identity provider in this situation. This puts them in a central
+    position to link logins together and learn which services the data subject uses. This reveals more
+    (potentially sensitive) personal information about the user.
+  refs:
+  - https://medium.com/@eduardofeo75/single-sign-on-balancing-privacy-security-and-user-experience-9555786b5e85
+  categories:
+  - DD
+  - L
+  characteristics:
+  - indicator: SSO identifiers
+    rationale: SSO uses unique identifiers for performing the single sign on, which enables linking sign
+      on requests for different services to each other and track the user across multiple platforms.
+    category: L
+    node_id: L.linked_data.unique_identifier
+    node_path: Linked data > Unique identifier
+  - indicator: Overprocessing of data by the SSO provider
+    rationale: The SSO provider processes the personal data for purposes not necessary to deliver the
+      sign-on service
+    category: DD
+    node_id: DD.unnecessary_processing.treatment_analysis_enrichment_transformation
+    node_path: Unnecessary processing > Treatment, analysis, enrichment, transformation
+- case: FLoC Browser tracking
+  summary: Federated Learning of Cohorts (FLoC) privacy sandboxing profiles users based on their browsing
+    history
+  detail: The FLoC privacy sandbox, while marketed as a privacy enhancing technology, has received criticism
+    that it has design flaws that may allow for profiling and tracking of users based on their Cohort
+    ID
+  refs:
+  - https://privacysandbox.com/intl/en_us/proposals/floc/
+  - https://blog.mozilla.org/en/privacy-security/privacy-analysis-of-floc/
+  categories:
+  - L
+  characteristics:
+  - indicator: Track activity to local user
+    rationale: Link local browsing activity to a user.
+    category: L
+    node_id: L.linked_data.unique_identifier
+    node_path: Linked data > Unique identifier
+  - indicator: Analyze browsing data for patterns
+    rationale: Analyze and link browsing data through patterns to assign FLoC cohort.
+    category: L
+    node_id: L.linkable_data.through_profiling_derivation_or_inference.profiling_an_individual_through_dis_similarity
+    node_path: Linkable data > Through Profiling, derivation, or inference > Profiling an individual through
+      (dis)similarity
+  - indicator: Indirectly link through others in FLoC cohort.
+    rationale: Indirectly link browsing behavior through other users in the cohort
+    category: L
+    node_id: L.linkable_data.through_profiling_derivation_or_inference.profiling_a_group_of_individuals
+    node_path: Linkable data > Through Profiling, derivation, or inference > Profiling a group of individuals
+  - indicator: User is profiled locally
+    rationale: The user is profiled locally on their own device
+    category: L
+    node_id: L.linkable_data.through_profiling_derivation_or_inference.profiling_an_individual
+    node_path: Linkable data > Through Profiling, derivation, or inference > Profiling an individual
+- case: Password managers automatically fills in identifying information
+  summary: By automatically filling in personal information, the information is available for java script
+    running in the page to retrieve and process it.
+  detail: Some websites already collect information filled in a webform even before it is submitted. This
+    means that auto-filled information (e.g., by a password manager), could already be collected even
+    if the user never intended to click submit on the form.
+  refs:
+  - https://gizmodo.com/before-you-hit-submit-this-company-has-already-logge-1795906081
+  categories:
+  - I
+  - U
+  characteristics:
+  - indicator: Page contains forms fields for personal data
+    rationale: Form fields requesting personal data are present.
+    category: I
+    node_id: I.identified_information.processing_of_identified_data
+    node_path: Identified information > Processing of identified data
+  - indicator: Webpage scripts proces the information that is entered locally
+    rationale: Scripts in the page can already access the information entered in the form fields before
+      submission.
+    category: U
+    node_id: U.unawareness_of_processing.unawareness_as_data_subject
+    node_path: Unawareness of processing > Unawareness as data subject
+- case: Logging actions
+  summary: Logging user actions prevents plausible deniability.
+  detail: Event or action logs can be used to prove that a user has taken certain actions, leaving them
+    a weakened plausible deniability (or none at all, depending on the strength/credibility of the logs).
+  refs:
+  - https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon
+  - https://www.kyberturvallisuuskeskus.fi/en/ncsc-news/instructions-and-guides/collecting-and-using-log-data
+  categories:
+  - Nr
+  characteristics:
+  - indicator: Action logging
+    rationale: Taking certain actions in the system may lead to that action being logged as a side-effect.
+    category: Nr
+    node_id: Nr.attributable_action_side_effect_evidence
+    node_path: Attributable action side-effect evidence
+  - indicator: Logged data causes non-repudiation
+    rationale: Logged data makes it harder (or impossible) to deny certain actions have taken place.
+    category: Nr
+    node_id: Nr.attributable_data_evidence.data
+    node_path: Attributable data evidence > Data
+- case: Context data from wearable or implanted (smart) devices
+  summary: Observing communications from wearable or implanted (smart) devices may reveal that a person
+    nearby is using such device.
+  detail: Observing communications from wearable or implanted (smart) devices such as a smartwatch, or
+    even a smart pacemaker or insulin pump, may reveal that a person nearby is using such device. This
+    can in turn leak additional information about the person, for example that they have a specific medical
+    condition.
+  refs:
+  - https://www.sciencedirect.com/science/article/pii/S153204641500074X
+  categories:
+  - D
+  - L
+  characteristics:
+  - indicator: Contextual data from sensors in communication meta-data
+    rationale: Contextual data form sensors in communication meta-data can lead to detectability threats.
+    category: D
+    node_id: D.observed_communications
+    node_path: Observed communications
+  - indicator: Inferred sensitive information from context data
+    rationale: Using contextual data to infer more about a data subject may lead to the unwanted discovery
+      of sensitive information.
+    category: L
+    node_id: L.linkable_data.through_profiling_derivation_or_inference.profiling_an_individual
+    node_path: Linkable data > Through Profiling, derivation, or inference > Profiling an individual
+- case: Linkable data from multiple users
+  summary: Data from multiple users are linked by by combining multiple records or datasets.
+  detail: When data from multiple individuals is combined, this can be used to profile them as a group.
+    For example, comparing records of people living in the same neighborhood may lead to attributes (such
+    as income level, energy consumption, etc.) being assigned to the entire neighborhood altogether.
+  refs:
+  - https://www.aepd.es/en/prensa-y-comunicacion/blog/group-privacy
+  categories:
+  - L
+  characteristics:
+  - indicator: Linking data from separate data subjects
+    rationale: Data points pertaining different data subjects within the data set are linked in order
+      to create new knowledge.
+    category: L
+    node_id: L.linkable_data.through_combination.combining_data_of_different_individuals
+    node_path: Linkable data > Through Combination > Combining data of different individuals
+  - indicator: Inferring information about a group of data subjects at once.
+    rationale: The inferred information about multiple individuals is used to profile the group of people
+      as a whole.
+    category: L
+    node_id: L.linkable_data.through_profiling_derivation_or_inference.profiling_a_group_of_individuals
+    node_path: Linkable data > Through Profiling, derivation, or inference > Profiling a group of individuals
+- case: Push notification payloads expose sensitive information
+  summary: The payload field of push notifications is often not encrypted, which leads to overexposure
+    of the potentially sensitive data within it.
+  detail: While most push notification service providers such as Apple Push Notification Service (APNs),
+    or Firebase Cloud Messaging (FCM) strongly recommend the encryption of the payload of push notifications
+    to mobile phones, this is quite often neglected. When this payload is not encrypted, sensitive data
+    such as the contents of personal messages can be exposed to the providers of such services. Often,
+    the owner of the mobile device is not aware that the contents of their notifications may be overly
+    exposed.
+  refs:
+  - https://blog.phnx.im/privacy-of-push-notifications/
+  categories:
+  - DD
+  - Nc
+  - U
+  characteristics:
+  - indicator: Data excessively available to push notification providers
+    rationale: The unencrypted payloads of push notifications cause the information within to be overly
+      accessible (i.e., to the providers of push notification services).
+    category: DD
+    node_id: DD.involved_parties_and_exposure.availability_accessibility_of_data
+    node_path: Involved parties and exposure > Availability/accessibility of data
+  - indicator: User is unaware of overexposure of their data
+    rationale: The user is often not aware that the push notification service provider has access to the
+      unencrypted payload data.
+    category: U
+    node_id: U.unawareness_of_processing.unawareness_as_data_subject
+    node_path: Unawareness of processing > Unawareness as data subject
+  - indicator: Lacking Encryption indicates insufficient cybersecurity risk management
+    rationale: The lack of encryption of notification payloads is an indication that the system was not
+      designed according to cyber security standards and best practices.
+    category: Nc
+    node_id: Nc.insufficient_cybersecurity_risk_management
+    node_path: Insufficient cybersecurity risk management

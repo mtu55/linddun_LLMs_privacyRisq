@@ -1,0 +1,101 @@
+﻿Incident ID;L;I;Nr;D;DD;U;Nc;Data exposure score;Identification score;Data Sensitivity score;Source;LINDDUN categories (raw)
+eurepoc-2019-01-01-2277;;;;;;x;x;1;-1;2;EuRepoC;Unawareness, Non-compliance
+eurepoc-2019-01-01-3969;;;;;;x;x;-1;-1;-1;EuRepoC;Unawareness, Non-compliance
+eurepoc-2020-10-27-1297;;;;;;x;;-1;-1;0;EuRepoC;Unawareness
+eurepoc-2020-12-14-1873;;;;;;;x;0;-1;2;EuRepoC;Non-compliance
+eurepoc-2021-01-01-3028;;;;;;;x;0;-1;-1;EuRepoC;Non-compliance
+eurepoc-2021-05-01-1401;;;;;;x;;-1;-1;-1;EuRepoC;Unawareness
+eurepoc-2021-06-01-1405;;;;;;x;;-1;-1;0;EuRepoC;Unawareness
+eurepoc-2021-06-01-1538;;;;;;x;x;-1;-1;2;EuRepoC;Unawareness, Non-compliance
+eurepoc-2021-09-01-1377;;;;;;x;;-1;-1;2;EuRepoC;Unawareness
+eurepoc-2021-09-01-4428;;;;;;x;;-1;-1;-1;EuRepoC;Unawareness
+eurepoc-2021-10-09-1379;;;;;;x;;-1;-1;0;EuRepoC;Unawareness
+eurepoc-2021-11-24-1555;;;;;;x;x;1;-1;-1;EuRepoC;Unawareness, Non-compliance
+eurepoc-2021-12-13-5022;;;;;;x;x;0;-1;-1;EuRepoC;Unawareness, Non-compliance
+eurepoc-2022-01-01-2033;;;;;;x;x;2;-1;-1;EuRepoC;Unawareness, Non-compliance
+eurepoc-2022-03-01-1611;;;;;;x;x;-1;-1;-1;EuRepoC;Unawareness, Non-compliance
+eurepoc-2022-03-15-1980;;;;;;x;x;0;-1;-1;EuRepoC;Unawareness, Non-compliance
+eurepoc-2022-04-15-2066;;;;;;x;x;-1;-1;-1;EuRepoC;Unawareness, Non-compliance
+eurepoc-2022-09-02-1816;;x;;;;x;;-1;1;-1;EuRepoC;Identifiability, Unawareness
+eurepoc-2022-10-01-1876;;;;;;x;x;1;-1;-1;EuRepoC;Unawareness, Non-compliance
+eurepoc-2022-11-23-1887;;;;;;;x;1;-1;2;EuRepoC;Non-compliance
+eurepoc-2023-01-01-2053;;;;;;x;;1;-1;-1;EuRepoC;Unawareness
+eurepoc-2023-01-01-2450;;;;;;x;x;-1;-1;-1;EuRepoC;Unawareness, Non-compliance
+eurepoc-2023-01-01-2975;;;;;;x;x;-1;-1;-1;EuRepoC;Unawareness, Non-compliance
+eurepoc-2023-01-01-2986;;;;;;x;x;1;-1;2;EuRepoC;Unawareness, Non-compliance
+eurepoc-2023-01-12-1888;;x;;;;;x;0;1;-1;EuRepoC;Identifiability, Non-compliance
+eurepoc-2023-03-17-2124;;;;;;x;x;-1;-1;-1;EuRepoC;Unawareness, Non-compliance
+eurepoc-2023-03-20-2093;;;;;;x;x;-1;-1;-1;EuRepoC;Unawareness, Non-compliance
+eurepoc-2023-03-28-2320;x;x;;;;;x;1;2;2;EuRepoC;Linkability, Identifiability, Non-compliance
+eurepoc-2023-03-30-2565;;;;;;x;x;-1;-1;-1;EuRepoC;Unawareness, Non-compliance
+eurepoc-2023-05-07-2238;;;;;;x;x;-1;-1;-1;EuRepoC;Unawareness, Non-compliance
+eurepoc-2023-06-03-2561;;;;;;;x;0;-1;-1;EuRepoC;Non-compliance
+eurepoc-2023-07-01-3671;;;;;;x;x;0;-1;-1;EuRepoC;Unawareness, Non-compliance
+eurepoc-2023-10-03-3499;;;;;;;x;1;-1;2;EuRepoC;Non-compliance
+eurepoc-2023-11-15-2809;;;;;;;x;-1;-1;-1;EuRepoC;Non-compliance
+eurepoc-2023-11-22-2832;;;;;;;x;-1;-1;-1;EuRepoC;Non-compliance
+eurepoc-2023-12-18-3093;;;;;;;x;0;-1;-1;EuRepoC;Non-compliance
+eurepoc-2023-12-29-2978;x;x;;;;x;x;-1;2;-1;EuRepoC;Linkability, Identifiability, Unawareness, Non-compliance
+eurepoc-2024-01-01-3538;;;;;;x;x;-1;-1;-1;EuRepoC;Unawareness, Non-compliance
+eurepoc-2024-01-25-3128;;;;;;;x;-1;-1;-1;EuRepoC;Non-compliance
+eurepoc-2024-02-04-3107;;;;;;x;x;-1;0;-1;EuRepoC;Unawareness, Non-compliance
+eurepoc-2024-02-07-3146;;;;;;;x;-1;-1;-1;EuRepoC;Non-compliance
+eurepoc-2024-02-08-3140;x;x;;;;x;x;0;2;-1;EuRepoC;Linkability, Identifiability, Unawareness, Non-compliance
+eurepoc-2024-02-19-3180;;;;;;x;x;-1;-1;-1;EuRepoC;Unawareness, Non-compliance
+eurepoc-2024-03-01-3372;;;;;;x;x;1;-1;2;EuRepoC;Unawareness, Non-compliance
+eurepoc-2024-04-05-3352;;;;;;;x;-1;-1;-1;EuRepoC;Non-compliance
+eurepoc-2024-05-01-3592;;;;;;;x;0;-1;-1;EuRepoC;Non-compliance
+eurepoc-2024-05-27-3510;;;;;;x;x;-1;-1;-1;EuRepoC;Unawareness, Non-compliance
+eurepoc-2024-06-01-3544;;;;;;;x;-1;-1;-1;EuRepoC;Non-compliance
+eurepoc-2024-06-06-3706;x;;;;;;x;1;1;2;EuRepoC;Linkability, Non-compliance
+eurepoc-2024-07-01-3638;;;;;;;x;-1;-1;-1;EuRepoC;Non-compliance
+eurepoc-2024-07-09-3628;;;;;;;x;-1;-1;-1;EuRepoC;Non-compliance
+eurepoc-2024-07-11-3623;;;;;;;x;-1;1;-1;EuRepoC;Non-compliance
+eurepoc-2024-07-19-3632;;;;;;;x;-1;-1;-1;EuRepoC;Non-compliance
+eurepoc-2024-08-01-4563;;;;;;;;-1;-1;-1;EuRepoC;No Label
+eurepoc-2024-08-03-4845;x;x;;;;x;x;0;2;-1;EuRepoC;Linkability, Identifiability, Unawareness, Non-compliance
+eurepoc-2024-08-08-3690;;;;;;;x;-1;1;-1;EuRepoC;Non-compliance
+eurepoc-2024-08-14-3700;;;;;;x;x;0;-1;2;EuRepoC;Unawareness, Non-compliance
+eurepoc-2024-08-21-3720;;;;;;x;x;-1;-1;-1;EuRepoC;Unawareness, Non-compliance
+eurepoc-2024-09-05-4950;x;x;;;;;x;1;2;2;EuRepoC;Linkability, Identifiability, Non-compliance
+eurepoc-2024-09-30-3889;;;;;;;x;-1;-1;-1;EuRepoC;Non-compliance
+eurepoc-2024-12-01-4336;;;;;;x;;-1;-1;-1;EuRepoC;Unawareness
+eurepoc-2025-01-01-4231;;;;;;x;x;2;-1;-1;EuRepoC;Unawareness, Non-compliance
+eurepoc-2025-02-13-4312;;;;;;;;-1;-1;2;EuRepoC;No Label
+eurepoc-2025-02-27-4410;;;;;;;;-1;-1;-1;EuRepoC;No Label
+eurepoc-2025-03-01-4355;;;;;;;;-1;-1;-1;EuRepoC;No Label
+eurepoc-2025-03-01-4578;;;;;;;;-1;-1;-1;EuRepoC;No Label
+eurepoc-2025-03-07-4358;;;;;;x;;-1;0;-1;EuRepoC;Unawareness
+eurepoc-2025-03-14-4529;;;;;;;;-1;-1;-1;EuRepoC;No Label
+eurepoc-2025-04-06-4708;;x;;;;x;;-1;1;-1;EuRepoC;Identifiability, Unawareness
+eurepoc-2025-06-01-5310;;;;;;x;;-1;-1;-1;EuRepoC;Unawareness
+eurepoc-2025-09-08-4939;;;;;;;x;1;-1;-1;EuRepoC;Non-compliance
+eurepoc-2025-09-19-4909;;;;;;x;x;-1;-1;-1;EuRepoC;Unawareness, Non-compliance
+eurepoc-2025-10-01-4935;;;;;;x;x;0;0;-1;EuRepoC;Unawareness, Non-compliance
+eurepoc-2025-11-04-5012;;;;;;;x;-1;-1;-1;EuRepoC;Non-compliance
+eurepoc-2025-11-09-5032;;;;;;x;x;0;-1;-1;EuRepoC;Unawareness, Non-compliance
+eurepoc-2025-11-14-5051;;;;;;;x;2;-1;-1;EuRepoC;Non-compliance
+eurepoc-2025-12-01-5089;x;;;;;;;-1;1;-1;EuRepoC;Linkability
+eurepoc-2025-12-27-5182;;;;;;x;;-1;-1;2;EuRepoC;Unawareness
+eurepoc-2026-01-01-5167;;;;;;;;-1;-1;-1;EuRepoC;No Label
+eurepoc-2026-01-30-5274;x;x;;;;;;-1;2;-1;EuRepoC;Linkability, Identifiability
+eurepoc-2026-03-16-5461;;;;;;;;-1;-1;-1;EuRepoC;No Label
+eurepoc-2026-05-15-5555;;;;;;x;;-1;-1;-1;EuRepoC;Unawareness
+eurepoc-2026-05-23-5580;;;;;;x;;-1;0;-1;EuRepoC;Unawareness
+eurepoc-2026-09-01-5942;x;x;;;;;;-1;2;-1;EuRepoC;Linkability, Identifiability
+eurepoc-2026-09-02-5893;;;;;;;;-1;-1;-1;EuRepoC;No Label
+eurepoc-2026-09-14-5916;;;;;;x;;-1;-1;-1;EuRepoC;Unawareness
+hibp-2018-11-04-WPSandbox-wpsandbox.io-WPSandbox;x;;;;;;;0;1;0;HIBP;Linkability
+hibp-2019-02-14-LBB-lbb.in-LBB;x;x;;;;;;0;2;0;HIBP;Linkability, Identifiability
+hibp-2019-07-01-Quidd-quidd.co-Quidd;x;x;;;;;;0;1;0;HIBP;Linkability, Identifiability
+hibp-2020-03-25-James-jamesdelivery.com.br-James;x;;;;;;;0;1;0;HIBP;Linkability
+hibp-2020-04-02-HomeRefill-homerefill.com.br-HomeRefill;x;x;;;;;;0;2;0;HIBP;Linkability, Identifiability
+hibp-2020-05-25-PreenMe-preen.me-Preen.Me;x;x;;;;;;0;2;0;HIBP;Linkability, Identifiability
+hibp-2022-12-03-GunAuction-gunauction.com-GunAuction.com;x;x;;;;;;0;2;0;HIBP;Linkability, Identifiability
+hibp-2023-11-11-BloomsToday-bloomstoday.com-Blooms Today;x;x;;;;;;0;2;0;HIBP;Linkability, Identifiability
+hibp-2024-02-28-LDLC-ldlc.com-LDLC;x;x;;;;;;0;2;0;HIBP;Linkability, Identifiability
+hibp-2025-04-11-SynthientCredentialStuffingThreatData--Synthient Credential Stuffing Threat Data;x;;;;;;;0;1;0;HIBP;Linkability
+hibp-2025-06-20-VietnamAirlines-vietnamairlines.com-Vietnam Airlines;x;x;;;;;;0;2;0;HIBP;Linkability, Identifiability
+hibp-2025-12-17-PassSport-pass.sports.gouv.fr-Pass'Sport;x;x;;;;;;0;2;0;HIBP;Linkability, Identifiability
+hibp-2026-04-24-Udemy-udemy.com-Udemy;x;x;;;;;;0;2;0;HIBP;Linkability, Identifiability
+hibp-2026-04-26-CTT-ctt.pt-CTT;x;x;;;;;;0;2;0;HIBP;Linkability, Identifiability

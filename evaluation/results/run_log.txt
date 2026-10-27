@@ -1,0 +1,35 @@
+Evaluation pipeline run log
+Timestamp UTC: 2026-10-21T20:50:30.472215+00:00
+Python: 3.14.0
+pandas: 3.0.3
+numpy: 2.4.6
+Random baseline simulations: 1000
+Random baseline seed: 20261019
+
+Rows loaded — expert: 100
+Rows loaded — privacyrisq: 100
+Rows loaded — claude_v2: 100
+Rows loaded — deepseek_v2: 100
+PASS: ID coverage — four conditions have identical sets of 100 exact Incident IDs
+PASS: expert NONE count — 50 empty expert label sets (R3)
+PASS: exclusive UNCERTAIN — claude_v2 — 47 UNCERTAIN rows; none co-occurs with labels
+PASS: exclusive UNCERTAIN — deepseek_v2 — 43 UNCERTAIN rows; none co-occurs with labels
+Primary category subset (expert positives >= 5): L, I, DD
+Rows loaded — claude_v1 (descriptive only): 100
+PASS: V1 ID coverage — claude_v1 — same 100 exact IDs as evaluation conditions
+Rows loaded — deepseek_v1 (descriptive only): 100
+PASS: V1 ID coverage — deepseek_v1 — same 100 exact IDs as evaluation conditions
+PASS: EQ1 claude_v2 — scored 53 non-abstaining incidents; excluded 47 abstentions
+PASS: EQ1 deepseek_v2 — scored 57 non-abstaining incidents; excluded 43 abstentions
+PASS: EQ2 claude_v2 — abstention count=47 of 100
+PASS: EQ2 deepseek_v2 — abstention count=43 of 100
+PASS: EQ3 privacyrisq — 100/100 scored (coverage=1.000000); expert NONE rows retained in scored denominator
+PASS: EQ3 claude_v2 — 53/100 scored (coverage=0.530000); expert NONE rows retained in scored denominator
+PASS: EQ3 deepseek_v2 — 57/100 scored (coverage=0.570000); expert NONE rows retained in scored denominator
+PASS: random baseline — 1000 simulations; numpy.default_rng seed=20261019
+PASS: descriptive Nc discrepancy — privacyrisq Nc=58; expert Nc=0
+PASS: output eq1_none_confusion — wrote CSV and LaTeX booktabs table
+PASS: output eq2_abstention — wrote CSV and LaTeX booktabs table
+PASS: output eq3_per_category — wrote CSV and LaTeX booktabs table
+PASS: output eq3_aggregates — wrote CSV and LaTeX booktabs table
+PASS: output descriptives — wrote CSV and LaTeX booktabs table
